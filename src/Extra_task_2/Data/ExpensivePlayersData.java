@@ -1,4 +1,4 @@
-package Data;
+package Extra_task_2.Data;
 
 
 public class ExpensivePlayersData extends CheapPlayersData {

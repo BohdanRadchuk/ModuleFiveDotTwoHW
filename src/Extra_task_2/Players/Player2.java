@@ -1,6 +1,6 @@
-package Players;
+package Extra_task_2.Players;
 
-import Data.CheapPlayersData;
+import Extra_task_2.Data.CheapPlayersData;
 
 public class Player2 extends CheapPlayersData {
 

@@ -1,6 +1,6 @@
-package Players;
+package Extra_task_2.Players;
 
-import Data.ExpensivePlayersData;
+import Extra_task_2.Data.ExpensivePlayersData;
 
 public class Player5 extends ExpensivePlayersData {
     public Player5(String song2, int price) {
