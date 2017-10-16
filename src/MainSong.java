@@ -1,11 +1,9 @@
-import Players.Player4;
-import Players.Player5;
-import Players.Player6;
+import Players.*;
 
 
 public class MainSong {
     public static void main(String[] args) {
-/*
+
         Player1 player1 = new Player1("ok song",500);
         System.out.println("player1 price = " + player1.getPrice());
         player1.playSong();
@@ -22,7 +20,7 @@ public class MainSong {
         Player5 player5 = new Player5("what a song", 700);
         System.out.println( player5.getPrice());
         player5.playSong();
-        player5.playPlaylist();*/
+        player5.playPlaylist();
         Player6 player6 = new Player6("what a song", 800);
         System.out.println( player6.getPrice());
         player6.playSong();
