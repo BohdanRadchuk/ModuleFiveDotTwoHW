@@ -23,7 +23,7 @@ public class CheapPlayersData {
         this.price = price;
     }
     public void playSong(){
-        System.out.println("Plying: \"" + song1 + "\"");
+        System.out.println("Plying: " + song1);
     }
 
 }
