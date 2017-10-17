@@ -1,5 +1,6 @@
 package Extra_task_2;
 
+
 import Extra_task_2.Players.*;
 import javafx.application.Application;
 import javafx.event.EventHandler;
@@ -7,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
 
@@ -46,18 +48,29 @@ public class MainSong extends Application{
 
     public void  playerChoice (Pane root){
 
-        Button button = new Button("Player 1");
-        button.setTranslateX(250);
-        button.setTranslateY(10);
-        button.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        Button button1 = new Button("Player 1");
+        button1.setTranslateX(100);
+        button1.setTranslateY(10);
+        button1.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                Player1 player1 = new Player1("ok song",500);
-                System.out.println("player1 price = " + player1.getPrice());
-                player1.playSong();
+
+                Player1 player1 = new Player1("def song",600,root);
+
             }
         });
-                root.getChildren().addAll(button); // , borderPane);
+        Button button2 = new Button("Player 2");
+        button2.setTextFill(Paint.valueOf("red"));
+        button2.setTranslateX(200);
+        button2.setTranslateY(10);
+        button2.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                Player2 player2 = new Player2("ok song",500);
+                player2.playSong();
+            }
+        });
+                root.getChildren().addAll(button1,button2); // , borderPane);
     }
 
     @Override
