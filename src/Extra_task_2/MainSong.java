@@ -55,7 +55,7 @@ public class MainSong extends Application{
             @Override
             public void handle(MouseEvent event) {
 
-                Player1 player1 = new Player1("def song",600,root);
+                Player1 player1 = new Player1("default song",400,root);
 
             }
         });
@@ -66,11 +66,55 @@ public class MainSong extends Application{
         button2.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                Player2 player2 = new Player2("ok song",500);
-                player2.playSong();
+                Player2 player2 = new Player2("default song",500, root);
+
             }
         });
-                root.getChildren().addAll(button1,button2); // , borderPane);
+        Button button3 = new Button("Player 3");
+        button3.setTextFill(Paint.valueOf("green"));
+        button3.setTranslateX(300);
+        button3.setTranslateY(10);
+        button3.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                Player3 player3 = new Player3("default song",600, root);
+
+            }
+        });
+        Button button4 = new Button("Player 4");
+        button4.setTextFill(Paint.valueOf("Yellow"));
+        button4.setTranslateX(100);
+        button4.setTranslateY(60);
+        button4.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                Player4 player4 = new Player4("default song",700, root);
+
+            }
+        });
+        Button button5 = new Button("Player 5");
+        button5.setTextFill(Paint.valueOf("blue"));
+        button5.setTranslateX(200);
+        button5.setTranslateY(60);
+        button5.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                Player5 player5 = new Player5("default song",800, root);
+
+            }
+        });
+        Button button6 = new Button("Player 6");
+        button6.setTextFill(Paint.valueOf("cyan"));
+        button6.setTranslateX(300);
+        button6.setTranslateY(60);
+        button6.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                Player6 player6 = new Player6("default song",999, root);
+
+            }
+        });
+        root.getChildren().addAll(button1,button2,button3,button4,button5,button6);
     }
 
     @Override

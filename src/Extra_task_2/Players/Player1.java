@@ -7,7 +7,7 @@ public class Player1 extends CheapPlayersData {
 
 
     public Player1(String song1, int price, Pane root) {
-        super(song1, price);
+        super(song1, price, root);
 
     }
 
