@@ -16,7 +16,7 @@ public class ExpensivePlayersData extends CheapPlayersData {
                 return playlist;
             }*/
     private ArrayList<String> playlist = new ArrayList<>();
-
+    Text text1;
     //private String[] playlist = new String[] {null , "The best song", "Good song", "Super Song"};                                 //initializing playlist array
     public ArrayList<String> getPlaylist() {
         return playlist;
@@ -70,8 +70,8 @@ public class ExpensivePlayersData extends CheapPlayersData {
         printArray.setTranslateY(60);
 
         printArray.setOnMouseClicked(event -> {
-
-            Text text1 = new Text("your playlist: " + Arrays.toString(playlist.toArray()));
+            root.getChildren().remove(text1);
+            text1 = new Text("your playlist: " + Arrays.toString(playlist.toArray()));
             text1.setTranslateX(450);
             text1.setTranslateY(250);
             root.getChildren().addAll(text1);
