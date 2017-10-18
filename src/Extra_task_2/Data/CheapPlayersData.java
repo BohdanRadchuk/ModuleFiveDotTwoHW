@@ -50,7 +50,7 @@ public class CheapPlayersData {
     public void show(Pane root) {
 
         root.getChildren().clear();
-
+        backToPlayers(root);
         TextField textField1 = new TextField("enter song name");
         textField1.setTranslateX(10);
         textField1.setTranslateY(10);
@@ -70,7 +70,8 @@ public class CheapPlayersData {
 
             }
         });
-
+    }
+        public void backToPlayers(Pane root){
         Button buttonBackToPlayerChoice = new Button("Choose another player");
         buttonBackToPlayerChoice.setTranslateX(600);
         buttonBackToPlayerChoice.setTranslateY(10);

@@ -13,12 +13,12 @@ public class Player4 extends ExpensivePlayersData {
     public void playAndShow(Pane root) {
 
         super.playAndShow(root);
-        super.setSong1(super.getPlaylist().get(super.getPlaylist().size()-1));            //????last massive element
+        super.setSong1(super.getPlaylist().get(super.getPlaylist().size()-1));            //last massive element
     }
 
-    @Override
+    /*@Override
     public void playSong() {
-    //    System.out.println("Playing: " + getPlaylist()[getPlaylist().length-1]);
-    }
+       System.out.println("Playing: " + getPlaylist()[getPlaylist().length-1]);
+    }*/
 }
 

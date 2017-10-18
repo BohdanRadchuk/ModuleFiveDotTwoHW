@@ -16,16 +16,19 @@ import java.util.Arrays;
 public class ExpensivePlayersData extends CheapPlayersData {
 
 
+
+
+    /*public String [] getPlaylist() {
+                return playlist;
+            }*/
+    private ArrayList<String> playlist = new ArrayList<>();
+    //private String[] playlist = new String[] {null , "The best song", "Good song", "Super Song"};                                 //initializing playlist array
     public ArrayList<String> getPlaylist() {
         return playlist;
     }
-
-    /*public String [] getPlaylist() {
-            return playlist;
-        }*/
-    ArrayList<String> playlist = new ArrayList<String>();
-    //private String[] playlist = new String[] {null , "The best song", "Good song", "Super Song"};                                 //initializing playlist array
-
+    public void setPlaylist(ArrayList<String> playlist) {
+        this.playlist = playlist;
+    }
     public ExpensivePlayersData(String song2, int price, Pane root) {
         super(song2, price, root);
     //    playlist[0] = song2;
@@ -46,6 +49,7 @@ public class ExpensivePlayersData extends CheapPlayersData {
             @Override
             public void handle(MouseEvent event) {
                 playlist.add(textField1.getText());
+                textField1.setText("");
             }
         });
 
@@ -83,18 +87,22 @@ public class ExpensivePlayersData extends CheapPlayersData {
     public void playAndShow(Pane root) {
         super.playAndShow(root);
         super.setSong1(playlist.get(0));
+        playAllSongs(root);
+    }
+     public void playAllSongs(Pane root){
         Button printArray = new Button("Play whole playlist ");
-        printArray.setTranslateX(400);
+        printArray.setTranslateX(200);
         printArray.setTranslateY(60);
 
         printArray.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                Text text1 = new Text("your playlist: " + Arrays.toString(playlist.toArray()));
 
+                Text text1 = new Text("your playlist: " + Arrays.toString(playlist.toArray()));
                 text1.setTranslateX(450);
                 text1.setTranslateY(250);
                 root.getChildren().addAll(text1);
+
             }
         });
         root.getChildren().addAll(printArray);
