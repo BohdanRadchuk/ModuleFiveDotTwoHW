@@ -10,9 +10,9 @@ public class Player4 extends ExpensivePlayersData {
     }
 
     @Override
-    public void playAndShow(Pane root) {
+    public void enterOtherSong(Pane root) {
 
-        super.playAndShow(root);
+        super.enterOtherSong(root);
         super.setSong1(super.getPlaylist().get(super.getPlaylist().size()-1));            //last massive element
     }
 

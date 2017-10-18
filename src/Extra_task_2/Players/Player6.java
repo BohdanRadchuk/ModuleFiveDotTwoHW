@@ -1,14 +1,7 @@
 package Extra_task_2.Players;
-
 import Extra_task_2.Data.ExpensivePlayersData;
-import javafx.event.EventHandler;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import javafx.scene.text.Text;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 
 public class Player6 extends ExpensivePlayersData {
@@ -23,7 +16,8 @@ public class Player6 extends ExpensivePlayersData {
         Button buttonShuffle = new Button("shuffle playlist");
         buttonShuffle.setTranslateX(350);
         buttonShuffle.setTranslateY(60);
-        buttonShuffle.setOnAction((event) -> {
+
+        buttonShuffle.setOnAction(event -> {
             Collections.shuffle(getPlaylist());
         });
         root.getChildren().addAll(buttonShuffle);

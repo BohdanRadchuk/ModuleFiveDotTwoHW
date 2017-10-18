@@ -25,14 +25,11 @@ public class Player5 extends ExpensivePlayersData {
         printArray.setTranslateX(200);
         printArray.setTranslateY(60);
 
-        printArray.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                Text text1 = new Text("your playlist: " + Arrays.toString(tempList.toArray()));
-                text1.setTranslateX(450);
-                text1.setTranslateY(250);
-                root.getChildren().addAll(text1);
-            }
+        printArray.setOnMouseClicked(event -> {
+            Text text1 = new Text("your playlist: " + Arrays.toString(tempList.toArray()));
+            text1.setTranslateX(450);
+            text1.setTranslateY(250);
+            root.getChildren().addAll(text1);
         });
         root.getChildren().addAll(printArray);
     }
