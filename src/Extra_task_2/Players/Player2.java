@@ -1,6 +1,7 @@
 package Extra_task_2.Players;
 
 import Extra_task_2.Data.CheapPlayersData;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -31,6 +32,11 @@ public class Player2 extends CheapPlayersData {
             text.setFill(Color.RED);
             text.setTranslateX(250);
             text.setTranslateY(250);
+            for (Node node : root.getChildren()) {
+                if (node instanceof Text) {
+                    ((Text)node).setText("");
+                }
+            }
             root.getChildren().addAll(text);
         });
         root.getChildren().addAll(playsong);

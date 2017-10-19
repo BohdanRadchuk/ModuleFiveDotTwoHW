@@ -1,9 +1,11 @@
 package Extra_task_2.Data;
 
 
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
 import java.util.ArrayList;
@@ -48,10 +50,28 @@ public class ExpensivePlayersData extends CheapPlayersData {
         button.setTranslateY(10);
         root.getChildren().addAll(button, textField1);
         button.setOnMouseClicked(event -> {
-            root.getChildren().removeAll(button, textField1, buttonPlusSong);
+            if (playlist.isEmpty()){
+                text1= new Text("your playlist is empty. Please enter at least one song");
+                text1.setTranslateX(250);
+                text1.setTranslateY(250);
+                text1.setFill(Color.RED);
+                for (Node node : root.getChildren()) {
+                    if (node instanceof Text) {
+                        ((Text)node).setText("");
+                    }
+                }
+                root.getChildren().addAll(text1);
+            }
+            else {
+                for (Node node : root.getChildren()) {
+                    if (node instanceof Text) {
+                        ((Text)node).setText("");
+                    }
+                }
+                root.getChildren().removeAll(button, textField1, buttonPlusSong);
             enterOtherSong(root);
             super.playerPriceShow(root);
-            super.playOneSong(root);
+            super.playOneSong(root);}
         });
         super.backToPlayers(root);                                      //кнопка возврата к выбору плеера
 
