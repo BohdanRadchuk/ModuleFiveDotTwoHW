@@ -1,9 +1,7 @@
 package Extra_task_2.Players;
 
 import Extra_task_2.Data.CheapPlayersData;
-import javafx.event.EventHandler;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;

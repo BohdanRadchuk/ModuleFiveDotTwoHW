@@ -12,7 +12,6 @@ public class Player6 extends ExpensivePlayersData {
 
     @Override
     public void playAllSongs(Pane root) {
-        //String [] tempList = new String[getPlaylist().size()];
         Button buttonShuffle = new Button("shuffle playlist");
         buttonShuffle.setTranslateX(350);
         buttonShuffle.setTranslateY(60);
@@ -22,31 +21,5 @@ public class Player6 extends ExpensivePlayersData {
         });
         root.getChildren().addAll(buttonShuffle);
         super.playAllSongs(root);
-        /*getPlaylist().toArray(tempList);
-
-        Button printArray = new Button("Play whole playlist ");
-        printArray.setTranslateX(200);
-        printArray.setTranslateY(60);
-
-        printArray.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                Text text1 = new Text("your playlist: " + Arrays.toString(tempList));
-                text1.setTranslateX(450);
-                text1.setTranslateY(250);
-                root.getChildren().addAll(text1);
-            }
-        });
-        root.getChildren().addAll(printArray);
-*/
     }
-
-    /* public void shuffle(){
-        for (int i =0 ; i<getPlaylist().length; i ++){
-            int n = (int) Math.round(-0.4999 + i  + Math.random()*(getPlaylist().length-0.0002-i));             // -0.4999 & +(.length-0.0002) сравнивают шансы выпадения граничных значений (0 и последнего элемента массива)
-            String temp = getPlaylist()[i];
-            getPlaylist()[i] = getPlaylist()[n];
-            getPlaylist() [n] = temp;
-        }
-    }*/
 }

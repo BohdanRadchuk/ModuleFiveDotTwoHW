@@ -13,6 +13,8 @@ public class CheapPlayersData {
     private String song1;
     private final int price;
     private String songTemp;
+    Text text;
+    Text text1;
 
     public String getSongTemp() {
         return songTemp;
@@ -93,8 +95,8 @@ public class CheapPlayersData {
         playsong.setTranslateX(200);
         playsong.setTranslateY(10);
         playsong.setOnMouseClicked(event -> {
-
-            Text text = new Text("Plaing " + song1);
+            root.getChildren().remove(text);
+            text = new Text("Plaing " + song1);
             text.setTranslateX(250);
             text.setTranslateY(250);
             root.getChildren().addAll(text);
@@ -108,7 +110,8 @@ public class CheapPlayersData {
         printPrice.setTranslateY(10);
 
         printPrice.setOnMouseClicked(event -> {
-            Text text1 = new Text("This player price is " + price);
+            root.getChildren().remove(text1);
+            text1 = new Text("This player price is " + price);
 
             text1.setTranslateX(250);
             text1.setTranslateY(200);

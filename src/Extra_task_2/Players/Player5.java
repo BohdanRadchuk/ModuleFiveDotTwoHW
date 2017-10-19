@@ -1,9 +1,7 @@
 package Extra_task_2.Players;
 
 import Extra_task_2.Data.ExpensivePlayersData;
-import javafx.event.EventHandler;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
@@ -11,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Player5 extends ExpensivePlayersData {
+    Text text1;
+
     public Player5(String song2, int price, Pane root) {
         super(song2, price, root);
     }
@@ -26,7 +26,8 @@ public class Player5 extends ExpensivePlayersData {
         printArray.setTranslateY(60);
 
         printArray.setOnMouseClicked(event -> {
-            Text text1 = new Text("your playlist: " + Arrays.toString(tempList.toArray()));
+            root.getChildren().remove(text1);
+            text1 = new Text("your playlist: " + Arrays.toString(tempList.toArray()));
             text1.setTranslateX(450);
             text1.setTranslateY(250);
             root.getChildren().addAll(text1);
